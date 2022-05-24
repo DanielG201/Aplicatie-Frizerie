@@ -22,10 +22,11 @@ public class UserService {
         userRepository = database.getRepository(User.class);
     }
 
-    public static void findUser(String username, String password) throws FoundUserException {
+    public static void findUser(String username, String password, String rol) throws FoundUserException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername())) {
                 if (Objects.equals(password, user.getPassword()))
+                    if (Objects.equals(rol, user.getRol()))
                     throw new FoundUserException();
             }
         }

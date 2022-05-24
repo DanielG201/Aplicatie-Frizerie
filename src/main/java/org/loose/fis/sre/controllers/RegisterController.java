@@ -45,14 +45,14 @@ public class RegisterController {
         } else {
             try {
                 registerLabel.setText("");
-                UserService.addUser(userField.getText(), passwordField.getText(), (String) choiceBox.getValue(), (String) nameField.getText(), (String) addressField.getText(), (String) emailField.getText(), (String) phoneField.getText());
+                UserService.addUser(userField.getText(), passwordField.getText(), (String) choiceBox.getValue(), nameField.getText(), addressField.getText(), emailField.getText(), phoneField.getText());
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
                 Stage myStage = (Stage) registerLabel.getScene().getWindow();
                 Scene scene = new Scene(root, 1080, 720);
                 myStage.setScene(scene);
                 myStage.show();
             } catch (UsernameAlreadyExistsException e) {
-                registerLabel.setText("Username already exists!");
+                registerLabel.setText("Username-ul exista deja!");
             }
         }
     }
