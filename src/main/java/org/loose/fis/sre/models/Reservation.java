@@ -21,7 +21,51 @@ public class Reservation {
 
     }
 
+    public void setBarberName(String barberName) {
+        this.barberName = barberName;
+    }
+
+    public void setBarberShopName(String barberShopName) {
+        this.barberShopName = barberShopName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    public void setClientPhone(String clientPhone) {
+        this.clientPhone = clientPhone;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     public String getTime() {
         return time;
+    }
+
+    public String getBarberName() {
+        return barberName;
+    }
+
+    public String getBarberShopName() {
+        return barberShopName;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public String getClientPhone() {
+        return clientPhone;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
