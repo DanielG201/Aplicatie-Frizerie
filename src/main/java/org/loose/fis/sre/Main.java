@@ -18,7 +18,7 @@ public class Main extends Application {
     public void start(Stage myStage) throws Exception {
         initDirectory();
         UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPanel.fxml"));
         myStage.setTitle("Login");
         Scene scene = new Scene(root, 1080, 720);
         myStage.initStyle(StageStyle.UNDECORATED);
