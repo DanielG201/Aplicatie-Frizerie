@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
    <top>
       <AnchorPane prefHeight="120.0" prefWidth="1080.0" style="-fx-background-color: #cc0099;" BorderPane.alignment="CENTER">
          <children>
@@ -40,7 +40,7 @@
             <TextField fx:id="userField" layoutX="388.0" layoutY="96.0" prefHeight="50.0" prefWidth="310.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="384.0" />
             <PasswordField fx:id="passwordField" layoutX="466.0" layoutY="187.0" prefHeight="50.0" prefWidth="310.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="384.0" />
             <ChoiceBox fx:id="choiceBox" layoutX="465.0" layoutY="275.0" prefWidth="150.0" />
-            <Button layoutX="492.0" layoutY="367.0" mnemonicParsing="false" onAction="#logInOnAction" prefHeight="66.0" prefWidth="102.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Log In">
+            <Button fx:id="logInButton" layoutX="492.0" layoutY="367.0" mnemonicParsing="false" onAction="#logInOnAction" prefHeight="66.0" prefWidth="102.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Log In">
                <font>
                   <Font name="Bookman Old Style" size="21.0" />
                </font>
@@ -55,7 +55,22 @@
                   <Font name="Berlin Sans FB Demi Bold" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="499.0" layoutY="252.0" text="Admin or User?" />
+            <Label layoutX="489.0" layoutY="252.0" text="Admin sau Client?" />
+            <Label layoutX="847.0" layoutY="85.0" text="Alatura-te!">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="839.0" layoutY="126.0" mnemonicParsing="false" onAction="#signUpOnAction" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Sign up">
+               <font>
+                  <Font name="Bookman Old Style" size="21.0" />
+               </font>
+            </Button>
+            <Label fx:id="logInLabel" alignment="CENTER" layoutX="287.0" layoutY="337.0" prefHeight="20.0" prefWidth="500.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>

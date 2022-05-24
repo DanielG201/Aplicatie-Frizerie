@@ -5,16 +5,49 @@ import org.dizitart.no2.objects.Id;
 public class User {
     @Id
     private String username;
-    private String password;
-    private String role;
+    private String password,rol,numeComplet,adresa,email,nrTel;
 
-    public User(String username, String password, String role) {
+
+    public User(String username, String password, String rol, String numeComplet, String adresa, String email, String nrTel) {
         this.username = username;
         this.password = password;
-        this.role = role;
+        this.rol = rol;
+        this.numeComplet = numeComplet;
+        this.adresa = adresa;
+        this.email = email;
+        this.nrTel = nrTel;
     }
 
-    public User() {
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getNrTel() {
+        return nrTel;
+    }
+
+    public String getNumeComplet() {
+        return numeComplet;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNrTel(String nrTel) {
+        this.nrTel = nrTel;
+    }
+
+    public void setNumeComplet(String numeComplet) {
+        this.numeComplet = numeComplet;
     }
 
     public String getUsername() {
@@ -33,12 +66,12 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public String getRol() {
+        return rol;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     @Override
@@ -50,6 +83,6 @@ public class User {
 
         if (username != null ? !username.equals(user.username) : user.username != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        return role != null ? role.equals(user.role) : user.role == null;
+        return rol != null ? rol.equals(user.rol) : user.rol == null;
     }
 }

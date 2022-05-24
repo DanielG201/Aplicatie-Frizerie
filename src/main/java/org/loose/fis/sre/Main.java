@@ -15,17 +15,15 @@ import java.nio.file.Path;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage myStage) throws Exception {
         initDirectory();
         UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("menu.fxml"));
-        primaryStage.setFullScreen(true);
-        primaryStage.setTitle("Login");
-        Scene scene = new Scene(root, 1920, 1080);
-        scene.getStylesheets().add(getClass().getClassLoader().getResource("menu.css").toExternalForm());
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        myStage.setTitle("Login");
+        Scene scene = new Scene(root, 1080, 720);
+        myStage.initStyle(StageStyle.UNDECORATED);
+        myStage.setScene(scene);
+        myStage.show();
     }
 
     private void initDirectory() {
