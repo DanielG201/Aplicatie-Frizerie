@@ -3,6 +3,7 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.exceptions.ReservationAlreadyExistsException;
+import org.loose.fis.sre.exceptions.ReservationNotFound;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.models.Reservation;
 import org.loose.fis.sre.models.User;
@@ -35,7 +36,23 @@ public class ReservationService {
         }
     }
 
+    public static Reservation findReservation(String time) throws ReservationNotFound {
+        for (Reservation reservation : reservationRepository.find()) {
+            if (Objects.equals(time, reservation.getTime()))
+                return reservation;
+        }
+        throw new ReservationNotFound();
+    }
+
     public static ObjectRepository<Reservation> getReservationRepository() {
         return reservationRepository;
+    }
+
+    public static void deleteReservation(Reservation toDelete) {
+        for (Reservation reservation : reservationRepository.find()) {
+            if (Objects.equals(toDelete.getTime(), reservation.getTime()))
+                reservationRepository.remove(toDelete);
+        }
+
     }
 }
