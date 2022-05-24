@@ -34,22 +34,26 @@ public class LoginController {
     }
 
     public void logInOnAction(ActionEvent event) throws IOException{
-        try {
-            UserService.findUser(userField.getText(), passwordField.getText());
-            logInLabel.setText("Username and Password do not match to an existing account!");
-        } catch (FoundUserException e) {
-            if(((String) (choiceBox.getValue())).equals("Admin")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPanel.fxml"));
-                Stage myStage = (Stage) logInButton.getScene().getWindow();
-                Scene scene = new Scene(root, 1080, 720);
-                myStage.setScene(scene);
-                myStage.show();
-            } else {
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("rezervare.fxml"));
-                Stage myStage = (Stage) logInButton.getScene().getWindow();
-                Scene scene = new Scene(root, 1080, 720);
-                myStage.setScene(scene);
-                myStage.show();
+        if(userField.getText().isBlank() || passwordField.getText().isBlank()) {
+            logInLabel.setText("Campuri Invalide!");
+        } else {
+            try {
+                UserService.findUser(userField.getText(), passwordField.getText());
+                logInLabel.setText("Username-ul si parola nu corespund unui cont existent!");
+            } catch (FoundUserException e) {
+                if (((String) (choiceBox.getValue())).equals("Admin")) {
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPanel.fxml"));
+                    Stage myStage = (Stage) logInButton.getScene().getWindow();
+                    Scene scene = new Scene(root, 1080, 720);
+                    myStage.setScene(scene);
+                    myStage.show();
+                } else {
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("rezervare.fxml"));
+                    Stage myStage = (Stage) logInButton.getScene().getWindow();
+                    Scene scene = new Scene(root, 1080, 720);
+                    myStage.setScene(scene);
+                    myStage.show();
+                }
             }
         }
     }

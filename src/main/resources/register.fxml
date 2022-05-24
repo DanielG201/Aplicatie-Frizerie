@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RegisterController">
    <top>
       <AnchorPane prefHeight="120.0" prefWidth="1080.0" style="-fx-background-color: #cc0099;" BorderPane.alignment="CENTER">
          <children>
@@ -40,7 +40,7 @@
             <TextField fx:id="userField" layoutX="137.0" layoutY="42.0" prefHeight="50.0" prefWidth="310.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="631.0" />
             <PasswordField fx:id="passwordField" layoutX="137.0" layoutY="118.0" prefHeight="50.0" prefWidth="310.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="631.0" />
             <ChoiceBox fx:id="choiceBox" layoutX="569.0" layoutY="271.0" prefWidth="150.0" />
-            <Button layoutX="772.0" layoutY="225.0" mnemonicParsing="false" onAction="#RegisterOnAction" prefHeight="66.0" prefWidth="143.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Register">
+            <Button layoutX="772.0" layoutY="225.0" mnemonicParsing="false" onAction="#registerOnAction" prefHeight="66.0" prefWidth="143.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Register">
                <font>
                   <Font name="Bookman Old Style" size="21.0" />
                </font>
@@ -78,6 +78,21 @@
             <Label layoutX="33.0" layoutY="395.0" prefHeight="51.0" prefWidth="95.0" text="Numar de Telefon" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="772.0" layoutY="79.0" mnemonicParsing="false" onAction="#signInOnAction" prefHeight="41.0" prefWidth="116.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Sign In">
+               <font>
+                  <Font name="Bookman Old Style" size="21.0" />
+               </font>
+            </Button>
+            <Label layoutX="632.0" layoutY="84.0" text="Ai deja cont?">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerLabel" alignment="CENTER" layoutX="615.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0">
+               <font>
+                  <Font name="System Italic" size="15.0" />
                </font>
             </Label>
          </children>

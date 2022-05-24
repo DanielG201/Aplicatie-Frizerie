@@ -18,6 +18,10 @@ public class User {
         this.nrTel = nrTel;
     }
 
+    public User(){
+
+    }
+
     public String getAdresa() {
         return adresa;
     }
