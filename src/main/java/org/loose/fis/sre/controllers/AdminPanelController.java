@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.loose.fis.sre.services.ReservationService;
 
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class AdminPanelController {
     }
 
     public void addOnAction(ActionEvent event)throws IOException {
+        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminAdd.fxml"));
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
@@ -31,6 +33,7 @@ public class AdminPanelController {
     }
 
     public void listOnAction(ActionEvent event)throws IOException {
+        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminList.fxml"));
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
@@ -39,6 +42,7 @@ public class AdminPanelController {
     }
 
     public void deleteOnAction(ActionEvent event)throws IOException {
+        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminDelete.fxml"));
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);

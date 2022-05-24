@@ -1,8 +1,12 @@
 package org.loose.fis.sre.models;
 
+import org.dizitart.no2.objects.Id;
+
 public class Reservation {
 
-    private String clientName,clientPhone,status,time,barberShopName,barberName;
+    @Id
+    private String time;
+    private String clientName,clientPhone,status,barberShopName,barberName;
 
     public Reservation(String clientName,String clientPhone,String time,String barberShopName,String barberName){
         this.clientName = clientName;
@@ -17,4 +21,7 @@ public class Reservation {
 
     }
 
+    public String getTime() {
+        return time;
+    }
 }

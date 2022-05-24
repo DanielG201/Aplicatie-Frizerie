@@ -34,7 +34,7 @@
                </image>
             </ImageView>
             <Button layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#logOutOnAction" opacity="0.0" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="25.0" />
-            <Button layoutX="100.0" layoutY="30.0" mnemonicParsing="false" onAction="#backOnAction" opacity="0.0" prefHeight="60.0" prefWidth="60.0" />
+            <Button layoutX="100.0" layoutY="29.0" mnemonicParsing="false" onAction="#backOnAction" opacity="0.0" prefHeight="60.0" prefWidth="60.0" />
          </children>
       </AnchorPane>
    </top>
@@ -71,7 +71,7 @@
                   <Font size="20.0" />
                </font>
             </TextField>
-            <TextField fx:id="shopfield" alignment="CENTER" layoutX="174.0" layoutY="306.0" prefHeight="50.0" prefWidth="310.0" promptText="Nume Salon">
+            <TextField fx:id="shopField" alignment="CENTER" layoutX="174.0" layoutY="306.0" prefHeight="50.0" prefWidth="310.0" promptText="Nume Salon">
                <font>
                   <Font size="20.0" />
                </font>
@@ -81,6 +81,11 @@
                   <Font size="20.0" />
                </font>
             </TextField>
+            <Label fx:id="registerLabel" alignment="CENTER" layoutX="80.0" layoutY="467.0" prefHeight="21.0" prefWidth="506.0">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </left>
