@@ -13,7 +13,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.loose.fis.sre.models.Reservation;
-import org.loose.fis.sre.models.TableRow;
 import org.loose.fis.sre.services.ReservationService;
 
 import java.io.IOException;
