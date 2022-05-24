@@ -38,7 +38,7 @@ public class LoginController {
             logInLabel.setText("Campuri Invalide!");
         } else {
             try {
-                UserService.findUser(userField.getText(), passwordField.getText());
+                UserService.findUser(userField.getText(), passwordField.getText(), (String) choiceBox.getValue());
                 logInLabel.setText("Username-ul si parola nu corespund unui cont existent!");
             } catch (FoundUserException e) {
                 if (((String) (choiceBox.getValue())).equals("Admin")) {
