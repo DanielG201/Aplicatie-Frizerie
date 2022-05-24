@@ -24,7 +24,6 @@ public class AdminPanelController {
     }
 
     public void addOnAction(ActionEvent event)throws IOException {
-        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminAdd.fxml"));
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
@@ -33,8 +32,10 @@ public class AdminPanelController {
     }
 
     public void listOnAction(ActionEvent event)throws IOException {
-        ReservationService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminList.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("adminList.fxml"));
+        Parent root = loader.load();
+        AdminListController adminListController = loader.getController();
+        adminListController.seeAllReservations();
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
         myStage.setScene(scene);
@@ -42,7 +43,6 @@ public class AdminPanelController {
     }
 
     public void deleteOnAction(ActionEvent event)throws IOException {
-        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminDelete.fxml"));
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);

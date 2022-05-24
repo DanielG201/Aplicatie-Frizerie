@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.loose.fis.sre.services.FileSystemService;
+import org.loose.fis.sre.services.ReservationService;
 import org.loose.fis.sre.services.UserService;
 
 import java.nio.file.Files;
@@ -18,6 +19,7 @@ public class Main extends Application {
     public void start(Stage myStage) throws Exception {
         initDirectory();
         UserService.initDatabase();
+        ReservationService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPanel.fxml"));
         myStage.setTitle("Login");
         Scene scene = new Scene(root, 1080, 720);

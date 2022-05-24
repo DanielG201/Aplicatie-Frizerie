@@ -34,4 +34,8 @@ public class ReservationService {
                 throw new ReservationAlreadyExistsException(time);
         }
     }
+
+    public static ObjectRepository<Reservation> getReservationRepository() {
+        return reservationRepository;
+    }
 }
