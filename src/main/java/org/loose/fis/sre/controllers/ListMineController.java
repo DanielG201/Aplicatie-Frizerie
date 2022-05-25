@@ -56,10 +56,10 @@ public class ListMineController {
         barberColumn.setCellValueFactory(new PropertyValueFactory<>("barberName"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        User goodUser = new User("","","","","","","");
+        User goodUser = new User();
         for(User user : UserService.getUserRepository().find()){
+            goodUser = user;
             if(Objects.equals(userName, user.getUsername())){
-                goodUser = user;
                 break;
             }
         }
