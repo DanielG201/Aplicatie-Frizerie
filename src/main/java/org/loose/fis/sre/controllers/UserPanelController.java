@@ -14,6 +14,12 @@ public class UserPanelController {
     @FXML
     private Label titleLabel;
 
+    private static String username;
+
+    public static void setUsername(String username) {
+        UserPanelController.username = username;
+    }
+
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) titleLabel.getScene().getWindow();
         stage.close();
@@ -47,7 +53,10 @@ public class UserPanelController {
     }
 
     public void listMineOnAction(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("listMine.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("listMine.fxml"));
+        Parent root = loader.load();
+        ListMineController listMineController = loader.getController();
+        listMineController.seeMyReservations(username);
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
         myStage.setScene(scene);

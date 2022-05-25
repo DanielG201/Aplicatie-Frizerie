@@ -63,6 +63,7 @@ public class ListMineController {
                 break;
             }
         }
+
         if(Objects.equals(userName, goodUser.getUsername())) {
             for (Reservation reservation : ReservationService.getReservationRepository().find()) {
                 if (Objects.equals(reservation.getClientName(), goodUser.getNumeComplet())) {
@@ -73,7 +74,6 @@ public class ListMineController {
             }
         }
         reservationTable.setItems(observableList);
-
     }
     public void logOutOnAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
