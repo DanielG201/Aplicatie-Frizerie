@@ -36,7 +36,10 @@ public class UserPanelController {
     }
 
     public void listFreeOnAction(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("listFree.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("listFree.fxml"));
+        Parent root = loader.load();
+        ListFreeController listFreeController = loader.getController();
+        listFreeController.seeFreeReservations();
         Stage myStage = (Stage) titleLabel.getScene().getWindow();
         Scene scene = new Scene(root, 1080, 720);
         myStage.setScene(scene);
