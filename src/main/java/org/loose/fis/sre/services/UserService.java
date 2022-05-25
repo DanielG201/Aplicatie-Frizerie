@@ -42,4 +42,8 @@ public class UserService {
                 throw new UsernameAlreadyExistsException(username);
         }
     }
+
+    public static ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
 }

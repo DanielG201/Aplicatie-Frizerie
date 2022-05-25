@@ -40,7 +40,7 @@ public class RegisterController {
     }
 
     public void registerOnAction(ActionEvent event) throws IOException{
-        if (userField.getText().isBlank() || passwordField.getText().isBlank() || addressField.getText().isBlank() || emailField.getText().isBlank() || nameField.getText().isBlank() || phoneField.getText().isBlank()) {
+        if (userField.getText().isBlank() || passwordField.getText().isBlank() || addressField.getText().isBlank() || emailField.getText().isBlank() || nameField.getText().isBlank() || phoneField.getText().isBlank() || choiceBox.getValue() == null) {
             registerLabel.setText("Va rog sa introduceti toate datele!");
         } else {
             try {

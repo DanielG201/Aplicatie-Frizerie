@@ -34,7 +34,7 @@ public class LoginController {
     }
 
     public void logInOnAction(ActionEvent event) throws IOException{
-        if(userField.getText().isBlank() || passwordField.getText().isBlank()) {
+        if(userField.getText().isBlank() || passwordField.getText().isBlank() || choiceBox.getValue() == null) {
             logInLabel.setText("Campuri Invalide!");
         } else {
             try {
@@ -48,7 +48,10 @@ public class LoginController {
                     myStage.setScene(scene);
                     myStage.show();
                 } else {
-                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("rezervare.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("userPanel.fxml"));
+                    Parent root = loader.load();
+                    UserPanelController userPanelController = loader.getController();
+                    userPanelController.setUsername(userField.getText());
                     Stage myStage = (Stage) logInButton.getScene().getWindow();
                     Scene scene = new Scene(root, 1080, 720);
                     myStage.setScene(scene);

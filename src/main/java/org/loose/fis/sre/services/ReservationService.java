@@ -60,21 +60,21 @@ public class ReservationService {
     public static void editReservation(String clientName, String clientPhone, String time) throws ReservationNotFree, ReservationNotFound{
         Reservation aux = new Reservation();
         for (Reservation reservation : reservationRepository.find()) {
+            aux = reservation;
             if (Objects.equals(time, reservation.getTime())) {
-                if (reservation.getStatus().equals("Liber")) {
-                    Reservation newReservation = new Reservation(clientName, clientPhone, time, reservation.getBarberShopName(), reservation.getBarberName());
-                    newReservation.setStatus("Rezervat");
-                    reservationRepository.remove(reservation);
-                    reservationRepository.insert(newReservation);
-                    aux = reservation;
-                    break;
-                } else {
-                    throw new ReservationNotFree();
-                }
+                break;
             }
         }
-        if(aux == null){
-            throw new ReservationNotFound();
+        if (Objects.equals(time, aux.getTime())){
+            if (aux.getStatus().equals("Liber")) {
+                reservationRepository.remove(aux);
+                Reservation newReservation = new Reservation(clientName, clientPhone, time, aux.getBarberShopName(), aux.getBarberName());
+                newReservation.setStatus("Rezervat");
+                reservationRepository.insert(newReservation);
+            } else {
+                throw new ReservationNotFree();
+            }
         }
+        throw new ReservationNotFound();
     }
 }
