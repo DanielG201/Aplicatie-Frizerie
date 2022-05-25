@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eae7fdb-1c1f-4bc6-80d6-3342dfdf0025" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/UserPanelImg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/UserPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +52,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexb\OneDrive\Desktop\Aplicatie-Frizerie\src\main\resources" />
       <recent name="C:\Users\alexb\OneDrive\Desktop\Aplicatie-Frizerie\src\main\resources\Images" />
+      <recent name="C:\Users\alexb\OneDrive\Desktop\Aplicatie-Frizerie\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.loose.fis.sre.exceptions" />

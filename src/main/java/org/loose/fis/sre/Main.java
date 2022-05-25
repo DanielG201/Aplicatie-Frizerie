@@ -20,7 +20,7 @@ public class Main extends Application {
         initDirectory();
         UserService.initDatabase();
         ReservationService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPanel.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("userPanel.fxml"));
         myStage.setTitle("Login");
         Scene scene = new Scene(root, 1080, 720);
         myStage.initStyle(StageStyle.UNDECORATED);
