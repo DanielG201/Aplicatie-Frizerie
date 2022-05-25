@@ -4,6 +4,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.exceptions.ReservationAlreadyExistsException;
 import org.loose.fis.sre.exceptions.ReservationNotFound;
+import org.loose.fis.sre.exceptions.ReservationNotFree;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.models.Reservation;
 import org.loose.fis.sre.models.User;
@@ -54,5 +55,26 @@ public class ReservationService {
                 reservationRepository.remove(toDelete);
         }
 
+    }
+
+    public static void editReservation(String clientName, String clientPhone, String time) throws ReservationNotFree, ReservationNotFound{
+        Reservation aux = new Reservation();
+        for (Reservation reservation : reservationRepository.find()) {
+            if (Objects.equals(time, reservation.getTime())) {
+                if (reservation.getStatus().equals("Liber")) {
+                    Reservation newReservation = new Reservation(clientName, clientPhone, time, reservation.getBarberShopName(), reservation.getBarberName());
+                    newReservation.setStatus("Rezervat");
+                    reservationRepository.remove(reservation);
+                    reservationRepository.insert(newReservation);
+                    aux = reservation;
+                    break;
+                } else {
+                    throw new ReservationNotFree();
+                }
+            }
+        }
+        if(aux == null){
+            throw new ReservationNotFound();
+        }
     }
 }
