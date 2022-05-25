@@ -48,10 +48,10 @@ public class LoginController {
                     myStage.setScene(scene);
                     myStage.show();
                 } else {
-//                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("listFree.fxml"));
-//                    Parent root1 = loader.load();
-//                    ListFreeController listFreeController = loader.getController();
-//                    listFreeController.seeFreeReservations();
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("listMine.fxml"));
+                    Parent root1 = loader.load();
+                    ListMineController listMineController = loader.getController();
+                    listMineController.seeMyReservations(userField.getText());
                     Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("userPanel.fxml"));
                     Stage myStage = (Stage) logInButton.getScene().getWindow();
                     Scene scene = new Scene(root, 1080, 720);

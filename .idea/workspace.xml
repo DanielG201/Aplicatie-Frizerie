@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eae7fdb-1c1f-4bc6-80d6-3342dfdf0025" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ListMineController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MakeReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/MakeReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/exceptions/ReservationDoesNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/exceptions/ReservationDoesNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/exceptions/ReservationNotFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/exceptions/ReservationNotFree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
