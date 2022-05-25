@@ -8,10 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.loose.fis.sre.exceptions.ReservationAlreadyExistsException;
-import org.loose.fis.sre.exceptions.ReservationDoesNotExistException;
-import org.loose.fis.sre.exceptions.ReservationNotFree;
-import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
+import org.loose.fis.sre.exceptions.*;
 import org.loose.fis.sre.models.Reservation;
 import org.loose.fis.sre.services.ReservationService;
 import org.loose.fis.sre.services.UserService;
@@ -32,7 +29,8 @@ public class MakeReservationController {
             try {
                 reservationLabel.setText("");
                 ReservationService.editReservation(nameField.getText(), phoneField.getText(), timeField.getText());
-            } catch (ReservationDoesNotExistException e) {
+                reservationLabel.setText("Rezervarea a fost efectuata cu succes!");
+            } catch (ReservationNotFound e) {
                 reservationLabel.setText("Ora aleasa nu corespunde cu o Rezervare");
             } catch (ReservationNotFree e) {
                 reservationLabel.setText("Acea ora este rezervata deja!");
