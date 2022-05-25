@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eae7fdb-1c1f-4bc6-80d6-3342dfdf0025" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AdminDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/exceptions/ReservationNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/deleteImage1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/deleteImage2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/adminDelete.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AdminListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AdminListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/models/TableRow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/UserPanelImg.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
