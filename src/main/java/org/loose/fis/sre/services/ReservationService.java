@@ -55,4 +55,8 @@ public class ReservationService {
         }
 
     }
+
+    public static void editReservation(String clientName, String clientPhone, String time){
+        
+    }
 }
