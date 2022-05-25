@@ -34,7 +34,7 @@ public class LoginController {
     }
 
     public void logInOnAction(ActionEvent event) throws IOException{
-        if(userField.getText().isBlank() || passwordField.getText().isBlank()) {
+        if(userField.getText().isBlank() || passwordField.getText().isBlank() || choiceBox.getValue() == null) {
             logInLabel.setText("Campuri Invalide!");
         } else {
             try {

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminPanelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #ffe6cc;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminPanelController">
    <top>
-      <AnchorPane prefHeight="120.0" prefWidth="1080.0" style="-fx-background-color: #cc0099;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="120.0" prefWidth="1080.0" style="-fx-background-color: #e68a00;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="106.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="25.0">
                <image>
@@ -69,17 +69,17 @@
                   <Image url="@AdminPanelImage.png" />
                </image>
             </ImageView>
-            <Button layoutX="399.0" layoutY="164.0" mnemonicParsing="false" onAction="#addOnAction" style="-fx-background-color: #cc0099; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Adauga Rezervare" textFill="WHITE" AnchorPane.rightAnchor="398.0">
+            <Button layoutX="399.0" layoutY="164.0" mnemonicParsing="false" onAction="#addOnAction" style="-fx-background-color: #e68a00; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Adauga Rezervare" textFill="WHITE" AnchorPane.rightAnchor="398.0">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="29.0" />
                </font>
             </Button>
-            <Button layoutX="399.0" layoutY="353.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="56.0" prefWidth="278.0" style="-fx-background-color: #cc0099; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Sterge Rezervare" textFill="WHITE" AnchorPane.rightAnchor="398.0">
+            <Button layoutX="399.0" layoutY="353.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="56.0" prefWidth="278.0" style="-fx-background-color: #e68a00; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Sterge Rezervare" textFill="WHITE" AnchorPane.rightAnchor="398.0">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="29.0" />
                </font>
             </Button>
-            <Button layoutX="399.0" layoutY="256.0" mnemonicParsing="false" onAction="#listOnAction" prefHeight="56.0" prefWidth="280.0" style="-fx-background-color: #cc0099; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Lista Rezervari" textFill="WHITE" AnchorPane.rightAnchor="398.0">
+            <Button layoutX="399.0" layoutY="256.0" mnemonicParsing="false" onAction="#listOnAction" prefHeight="56.0" prefWidth="280.0" style="-fx-background-color: #e68a00; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" text="Lista Rezervari" textFill="WHITE" AnchorPane.rightAnchor="398.0">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="29.0" />
                </font>
